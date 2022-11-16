@@ -26,8 +26,6 @@ void setup()
 
   pinMode(trigpin, OUTPUT);
   pinMode(echopin, INPUT);
-  
-  Serial.println("Start");
 
   myservo.attach(10);
 
@@ -37,6 +35,8 @@ void setup()
   motor2.setSpeed(255);
   motor3.setSpeed(255);
   motor4.setSpeed(255);
+
+  Serial.println("Start");
 }
 
 void loop()
@@ -74,6 +74,8 @@ void loop()
     {
       int until = millis() + 2500;
 
+      Serial.println("Turning right..");
+
       while (until > millis())
       {
         motor1.run(FORWARD);
@@ -87,6 +89,8 @@ void loop()
     else
     {
       int until = millis() + 2500;
+
+      Serial.println("Turning left..");
 
       while (until > millis())
       {
