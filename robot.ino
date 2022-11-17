@@ -1,7 +1,7 @@
 #include "AFMotor.h"
 #include <Servo.h>
 
-#define echopin 2
+#define echopin 3
 #define trigpin 13
 
 Servo myservo;
@@ -31,24 +31,21 @@ void setup()
 
   myservo.write(90);
 
-  motor1.setSpeed(255);
-  motor2.setSpeed(255);
-  motor3.setSpeed(255);
-  motor4.setSpeed(255);
+  motor1.setSpeed(180);
+  motor2.setSpeed(180);
+  motor3.setSpeed(180);
+  motor4.setSpeed(180);
 
   Serial.println("Start");
 }
 
 void loop()
 {
-  motor1.run(FORWARD);
-  motor2.run(FORWARD);
-  motor3.run(FORWARD);
-  motor4.run(FORWARD);
-
   if (calculateDistance() <= distanceBack)
   {
-    while (calculateDistance() <= distanceBack * 2)
+    Serial.println("Going back..");
+
+    while (calculateDistance() <= distanceBack)
     {
       motor1.run(BACKWARD);
       motor2.run(BACKWARD);
@@ -72,7 +69,7 @@ void loop()
 
     if (distance0 > distance1)
     {
-      int until = millis() + 2500;
+      int until = millis() + 2000;
 
       Serial.println("Turning right..");
 
@@ -88,7 +85,7 @@ void loop()
 
     else
     {
-      int until = millis() + 2500;
+      int until = millis() + 2000;
 
       Serial.println("Turning left..");
 
@@ -105,6 +102,8 @@ void loop()
 
   else
   {
+    Serial.println("Going forward..");
+    
     myservo.write(90);
 
     motor1.run(FORWARD);
