@@ -59,7 +59,7 @@ void loop()
 
     int distance0 = calculateDistance();
 
-    myservo.write(170);
+    myservo.write(180);
 
     delay(500);
 
