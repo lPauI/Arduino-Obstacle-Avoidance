@@ -1,8 +1,8 @@
 #include "AFMotor.h"
 #include <Servo.h>
 
-#define echopin 3
-#define trigpin 13
+#define echopin A1
+#define trigpin A0
 
 Servo myservo;
 
@@ -18,7 +18,7 @@ AF_DCMotor motor4(MOTOR_4, MOTOR12_64KHZ);
 
 long duration;
 
-const int distanceBack = 20;
+const int distanceBack = 30;
 
 void setup()
 {
@@ -69,7 +69,7 @@ void loop()
 
     if (distance0 > distance1)
     {
-      int until = millis() + 2000;
+      int unsigned until = millis() + 2000;
 
       Serial.println("Turning right..");
 
@@ -85,7 +85,7 @@ void loop()
 
     else
     {
-      int until = millis() + 2000;
+      int unsigned until = millis() + 2000;
 
       Serial.println("Turning left..");
 
