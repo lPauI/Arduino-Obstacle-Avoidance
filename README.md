@@ -24,7 +24,7 @@ Distributed under the **MIT License**. See [LICENSE](https://github.com/lPauI/Ar
 Contributions to this project are welcome. If you have suggestions, improvements, or bug fixes, please fork this repository, make the necessary changes, and submit a pull request.
 
 # *Installation*
-1. Clone this repository to your computer or download the code files.
+1. Clone this repository (`git clone https://github.com/lPauI/Arduino-obstacle-avoider.git`) to your computer or download the code files.
 2. Upload the provided **Arduino sketch (robot.ino)** to your Arduino board using the Arduino IDE.
 3. Assemble the hardware as described in the code or customize the pin connections as needed.
 4. Power up the robot and observe its **obstacle avoidance behavior**.
