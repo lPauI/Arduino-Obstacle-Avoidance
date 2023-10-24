@@ -1,7 +1,7 @@
 # *Description*
-This Arduino project is designed to create an **obstacle avoidance robot** using an obstacle sensor and AFMotor modules.
+This Arduino project focuses on creating an **obstacle avoidance robot** that employs ultrasonic sensors for distance measurement and `AFMotor` modules to control its motors.
 
-The robot is programmed to detect obstacles in its path and navigate around them. It uses ultrasonic sensors to measure distances and `AFMotor` modules to control the motors for movement.
+The robot detects obstacles in its path and navigates around them.
 
 # *Components*
 - **Arduino board** (e.g., Arduino Uno)
